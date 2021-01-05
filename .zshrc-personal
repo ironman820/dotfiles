@@ -2,3 +2,4 @@ alias ssh="TERM=xterm ssh"
 alias config='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 
 eval "$(starship init zsh)"
+eval "$(thefuck -a fixit)"
