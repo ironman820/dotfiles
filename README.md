@@ -19,7 +19,7 @@ echo "dotfiles" >> .gitignore
 Clone the repo to the folder
 
 ```
-git clone <REPO URL> $HOME/dotfiles
+git clone --bare <REPO URL> $HOME/dotfiles
 ```
 
 Checkout the new config
