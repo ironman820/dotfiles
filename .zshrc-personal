@@ -1,6 +1,26 @@
-alias _='sudo'
+alias _="sudo"
+alias cd..="cd .."
+alias cleanup="sudo pacman -Rns $(pacman -Qtdq)"
+alias config="git --git-dir=$HOME/dotfiles --work-tree=$HOME"
+alias df="df -h"
+alias ducks="du -chs * | sort -rh | head -11"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias free="free -h"
+alias l="ls"
+alias la="ls -a"
+alias ll="ls -la"
+alias ls="ls --color=auto"
+alias lsa="ls -lah"
+alias md="mkdir -p"
+alias mirrors="sudo reflector --latest 50 --country US --verbose --number 20 --sort rate --save /etc/pacman.d/mirrorlist"
+alias rd=rmdir
+alias sr="sudo reboot"
 alias ssh="TERM=xterm ssh"
-alias config='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias ssn="sudo shutdown now"
+alias upall="yay -Syu --noconfirm"
+alias update="sudo pacman -Syyu"
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 eval "$(starship init zsh)"
 eval "$(thefuck -a fixit)"
