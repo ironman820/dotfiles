@@ -116,7 +116,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- My Stuff
     , ((modm,               xK_b     ), spawn "exec ~/bin/bartoggle")
     , ((modm,               xK_z     ), spawn "exec ~/bin/inhibit_activate")
-    -- , ((modm .|. shiftMask, xK_z     ), spawn "exec ~/bin/inhibit_deactivate")
+    , ((modm .|. shiftMask, xK_z     ), spawn "exec ~/bin/inhibit_deactivate")
     , ((modm .|. shiftMask, xK_a     ), spawn "exec ~/bin/clipboardy")
 
     , ((mod1Mask, xK_F2), spawn "gmrun")
@@ -332,7 +332,7 @@ myStartupHook = do
   spawnOnce "nextcloud &"
   spawnOnce "udiskie &"
   spawnOnce "nm-applet &"
-  -- spawnOnce "volumeicon &"
+  spawnOnce "volumeicon &"
   spawnOnce "emacs --daemon &"
   -- spawnOnce "start-pulseaudio-x11 &"
   spawnOnce "variety &"
