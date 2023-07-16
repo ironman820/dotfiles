@@ -1,0 +1,16 @@
+keys.txt.age
+
+{{- if ne .chezmoi.hostname "e105-laptop" }}
+.ssh/github_work
+.ssh/github_work.pub
+.ssh/id_ed25519_sk_work
+.ssh/id_ed25519_sk_work.pub
+{{- end }}
+
+{{- if (and (ne .chezmoi.hostname "ironman-laptop") (ne .chezmoi.hostname "friday")) }}
+.ssh/id_ed25519_sk.pub
+.ssh/id_ed25519_sk
+.ssh/github_home
+.ssh/github_home.pub
+{{- end }}
+
