@@ -1,11 +1,6 @@
 default:
   @just --list
 
-age-keys:
-  #!/usr/bin/env bash
-  cd ~/.config/sops/age
-  age -d -o keys.txt keys.txt.age
-
 apps:
   flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   flatpak install -uy com.usebottles.bottles
@@ -49,16 +44,17 @@ distrobox-universal:
   echo 'Creating Universal Development distrobox ...'
   distrobox create --image mcr.microsoft.com/devcontainers/universal:latest -n universal -Y
 
+switch:
+  flake switch ~/.config/flake#
+
 touch:
   pip install --upgrade gnome-extensions-cli
   gext install improvedosk@nick-shmyrev.dev
   gext install gestureImprovements@gestures
 
 update:
-  #!/usr/bin/env bash
-  cd ~/.config/flake
-  flake update
-  flake switch
+  flake update ~/.config/flake#
+  flake switch ~/.config/flake#
   flatpak update -y
   distrobox upgrade -a
 
