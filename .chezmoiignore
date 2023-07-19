@@ -14,3 +14,7 @@ keys.txt.age
 .ssh/github_home.pub
 {{- end }}
 
+{{- if (eq (output "cat" (joinpath .chezmoi.homeDir ".config" "is_server") | trim) "false") }}
+.ssh/github_servers
+.ssh/github_servers.pub
+{{- end }}
