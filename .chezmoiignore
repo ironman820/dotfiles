@@ -1,6 +1,6 @@
 keys.txt.age
 
-{{- if ne .chezmoi.hostname "e105-laptop" }}
+{{- if (eq (output "cat" (joinPath .chezmoi.homeDir ".config" "is_personal") | trim) "true") }}
 .ssh/github_work
 .ssh/github_work.pub
 .ssh/id_ed25519_sk_work
