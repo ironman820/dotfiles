@@ -5,9 +5,11 @@ keys.txt.age
 .ssh/github_work.pub
 .ssh/id_ed25519_sk_work
 .ssh/id_ed25519_sk_work.pub
+.ssh/id_ed25519_sk_work2
+.ssh/id_ed25519_sk_work2.pub
 {{- end }}
 
-{{- if (and (ne .chezmoi.hostname "ironman-laptop") (ne .chezmoi.hostname "friday")) }}
+{{- if (eq (output "cat" (joinPath .chezmoi.homeDir ".config" "is_personal") | trim) "false") }}
 .ssh/id_ed25519_sk.pub
 .ssh/id_ed25519_sk
 .ssh/github_home
