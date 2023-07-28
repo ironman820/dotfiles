@@ -1,22 +1,30 @@
 keys.txt.age
 
-{{- if (eq (output "cat" (joinPath .chezmoi.homeDir ".config" "is_personal") | trim) "true") }}
-.ssh/github_work
-.ssh/github_work.pub
-.ssh/id_ed25519_sk_work
-.ssh/id_ed25519_sk_work.pub
-.ssh/id_ed25519_sk_work2
-.ssh/id_ed25519_sk_work2.pub
-{{- end }}
-
-{{- if (eq (output "cat" (joinPath .chezmoi.homeDir ".config" "is_personal") | trim) "false") }}
-.ssh/id_ed25519_sk.pub
-.ssh/id_ed25519_sk
-.ssh/github_home
-.ssh/github_home.pub
-{{- end }}
-
 {{- if (eq (output "cat" (joinPath .chezmoi.homeDir ".config" "is_server") | trim) "false") }}
-.ssh/github_servers
-.ssh/github_servers.pub
+  .ssh/github_servers
+  .ssh/github_servers.pub
+  {{- if (eq (output "cat" (joinPath .chezmoi.homeDir ".config" "is_personal") | trim) "true") }}
+    .ssh/github_work
+    .ssh/github_work.pub
+    .ssh/id_ed25519_sk_work
+    .ssh/id_ed25519_sk_work.pub
+    .ssh/id_ed25519_sk_work2
+    .ssh/id_ed25519_sk_work2.pub
+  {{- else }}
+    .ssh/id_ed25519_sk.pub
+    .ssh/id_ed25519_sk
+    .ssh/github_home
+    .ssh/github_home.pub
+  {{- end }}
+{{- else }}
+  .ssh/github_work
+  .ssh/github_work.pub
+  .ssh/id_ed25519_sk_work
+  .ssh/id_ed25519_sk_work.pub
+  .ssh/id_ed25519_sk_work2
+  .ssh/id_ed25519_sk_work2.pub
+  .ssh/id_ed25519_sk.pub
+  .ssh/id_ed25519_sk
+  .ssh/github_home
+  .ssh/github_home.pub
 {{- end }}
