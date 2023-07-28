@@ -53,8 +53,10 @@ touch:
   gext install gestureImprovements@gestures
 
 update:
-  flake update ~/.config/flake#
-  flake switch ~/.config/flake#
+  #!/usr/bin/env bash
+  cd ~/.config/flake
+  flake update
+  flake switch
   flatpak update -y
   distrobox upgrade -a
 
