@@ -1,11 +1,7 @@
 keys.txt.age
 
 {{- if (eq (output "cat" (joinPath .chezmoi.homeDir ".config" "is_server") | trim) "false") }}
-  .ssh/github_servers
-  .ssh/github_servers.pub
   {{- if (eq (output "cat" (joinPath .chezmoi.homeDir ".config" "is_personal") | trim) "true") }}
-    .ssh/github_work
-    .ssh/github_work.pub
     .ssh/id_ed25519_sk_work
     .ssh/id_ed25519_sk_work.pub
     .ssh/id_ed25519_sk_work2
