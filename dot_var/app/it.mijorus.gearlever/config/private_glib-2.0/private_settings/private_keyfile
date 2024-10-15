@@ -1,0 +1,3 @@
+[it/mijorus/gearlever]
+exec-as-name-for-terminal-apps=true
+fetch-updates-in-background=true
