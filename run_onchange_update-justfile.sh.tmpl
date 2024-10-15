@@ -6,7 +6,7 @@ default:
 
 # Setup apps for a fresh install
 setup:
-	brew install sops age btop fping mtr poetry
+	brew install sops age btop fping mtr poetry gitleaks pre-commit
 {{- if eq .chezmoi.hostname "friday" }}
 	flatpak install -y com.calibre_ebook.calibre
 	flatpak install -y com.discordapp.Discord
