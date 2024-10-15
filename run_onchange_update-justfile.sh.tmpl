@@ -1,0 +1,37 @@
+#!/usr/bin/env sh
+
+cat > {{- .chezmoi.homeDir -}}/.justfile << EOF
+default:
+	just -l
+
+# Setup apps for a fresh install
+setup:
+	brew install sops age btop fping mtr poetry
+{{- if eq .chezmoi.hostname "friday" }}
+	flatpak install -y com.calibre_ebook.calibre
+	flatpak install -y com.discordapp.Discord
+	flatpak install -y com.google.AndroidStudio
+	flatpak install -y im.riot.Riot
+	flatpak install -y io.github.Hexchat
+	flatpak install -y org.audacityteam.Audacity
+	flatpak install -y org.moneymanagerex.MMEX
+{{- end }}
+	flatpak install -y com.google.Chrome
+	flatpak install -y com.microsoft.Edge
+	flatpak install -y com.yubico.yubioath
+	flatpak install -y io.github.martchus.syncthingtray
+	flatpak install -y it.mijorus.gearlever
+	flatpak install -y md.obsidian.Obsidian
+	flatpak install -y org.gimp.GIMP
+	flatpak install -y org.libreoffice.LibreOffice
+	flatpak install -y org.remmina.Remmina
+	flatpak install -y org.telegram.desktop
+	flatpak install -y org.telegram.desktop.webview
+	flatpak install -y org.videolan.VLC
+	flatpak install -y uk.org.greenend.chiark.sgtatham.putty
+
+# You can add your own commands here! For documentation, see: https://ublue.it/guide/just/
+import "/usr/share/ublue-os/justfile"
+EOF
+
+just setup

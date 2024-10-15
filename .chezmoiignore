@@ -1,0 +1,5 @@
+.config/sops/age/keys.txt
+.justfile
+keys.txt.age
+ssh
+.ssh/github
