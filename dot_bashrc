@@ -28,6 +28,7 @@ unset rc
 
 alias ce="chezmoi edit -a"
 alias ca="chezmoi add"
+alias cae="chezmoi add --encrypt"
 alias cu="chezmoi update -a"
 alias mtr="sudo mtr"
 
