@@ -1,5 +1,5 @@
     User royell
     KexAlgorithms +diffie-hellman-group1-sha1
     Ciphers +3des-cbc
-    HostKeyAlgorithms +ssh-dss
-    PubkeyAcceptedAlgorithms +ssh-dss
+    #HostKeyAlgorithms +ssh-dss
+    #PubkeyAcceptedAlgorithms +ssh-dss

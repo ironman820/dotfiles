@@ -1,5 +1,9 @@
     IdentitiesOnly yes
+{{/* if eq deploy true */}}
+#    IdentityFile ~/.ssh/deploy_ed25519
+{{/* else */}}
     IdentityFile ~/.ssh/id_ed25519_sk
-{{ if eq .chezmoi.hostname "e105-laptop" }}
+  {{ if eq .chezmoi.hostname "e105-laptop" }}
     IdentityFile ~/.ssh/id_ed25519_sk_work2
+  {{/* end */}}
 {{ end -}}

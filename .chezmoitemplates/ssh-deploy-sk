@@ -1,0 +1,2 @@
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/deploy_ed25519
