@@ -4,6 +4,9 @@
 # github_home hash: {{ joinPath .chezmoi.sourceDir "ssh/encrypted_private_github_home.age" | include | sha256sum }}
 echo "{{- joinPath .chezmoi.sourceDir "ssh/encrypted_private_github_home.age" | include | decrypt -}}" > {{ joinPath .chezmoi.homeDir ".ssh/github" }}
 chmod 600 {{ joinPath .chezmoi.homeDir ".ssh/github" -}}
+# royell_git_work hash: {{ joinPath .chezmoi.sourceDir "ssh/encrypted_private_royell_git_work.age" | include | sha256sum }}
+echo "{{- joinPath .chezmoi.sourceDir "ssh/encrypted_private_royell_git_work.age" | include | decrypt -}}" > {{ joinPath .chezmoi.homeDir ".ssh/royell_git" }}
+chmod 600 {{ joinPath .chezmoi.homeDir ".ssh/royell_git" }}
 {{ end }}
 
 {{ if eq .chezmoi.hostname "e105-laptop" -}}
