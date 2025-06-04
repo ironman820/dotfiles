@@ -1,4 +1,5 @@
 .config/sops/age/keys.txt
+.config/tmux/plugins
 .justfile
 keys.txt.age
 ssh
