@@ -3,4 +3,3 @@
 .justfile
 keys.txt.age
 ssh
-.ssh/github
