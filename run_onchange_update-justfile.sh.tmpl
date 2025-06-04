@@ -35,4 +35,6 @@ import "/usr/share/ublue-os/justfile"
 EOF
 
 just setup
-${HOME}/scripts/ublue-bling.sh
+if [ ! -d ${HOME}/.tmux ]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
