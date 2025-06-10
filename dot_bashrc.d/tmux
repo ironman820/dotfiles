@@ -1,1 +1,4 @@
-[ -z "${TMUX}" ] && { tmux attach || exec tmux new-session -s home && exit; }
+if [ $DISPLAY ]; then
+  [[ $- != *i* ]] && return
+  [ -z "${TMUX}" ] && { tmux attach || exec tmux new-session -s home && exit; }
+fi
