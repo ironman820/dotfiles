@@ -1,3 +1,2 @@
-  User root
   IdentitiesOnly yes
   IdentityFile ~/.ssh/konect360_ed25519
