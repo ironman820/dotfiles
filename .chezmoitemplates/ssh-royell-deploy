@@ -1,2 +1,2 @@
   User royell
-{{ template "ssh-deploy-sk" -}}
+{{ template "ssh-deploy" -}}
