@@ -1,7 +1,9 @@
+{{ if eq .chezmoi.hostname "e105-laptop" "friday" }}
 # Prefix Remap
 unbind C-b
 set-option -g prefix C-SPACE
 bind-key C-SPACE send-prefix
+{{- end }}
 
 # split panes using | and -
 bind | split-window -h
