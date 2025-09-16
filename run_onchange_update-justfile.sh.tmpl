@@ -8,7 +8,7 @@ default:
 setup:
   mkdir -p \${HOME}/.config
   touch \${HOME}/.config/no-show-user-motd
-  brew install -q sops age btop fping gitleaks pre-commit uv
+  brew install -q sops age btop fping gitleaks pre-commit uv neovim lazygit diff-so-fancy
 {{- if eq .chezmoi.hostname "friday" }}
   flatpak install -y --or-update --noninteractive com.calibre_ebook.calibre
   flatpak install -y --or-update --noninteractive im.riot.Riot
@@ -26,9 +26,9 @@ setup:
   flatpak install -y --or-update --noninteractive org.libreoffice.LibreOffice
   flatpak install -y --or-update --noninteractive org.remmina.Remmina
   flatpak install -y --or-update --noninteractive org.telegram.desktop
-  flatpak install -y --or-update --noninteractive org.telegram.desktop.webview
   flatpak install -y --or-update --noninteractive org.videolan.VLC
   flatpak install -y --or-update --noninteractive uk.org.greenend.chiark.sgtatham.putty
+  flatpak install -y --or-update --noninteractive dev.zed.Zed
 
 # You can add your own commands here! For documentation, see: https://ublue.it/guide/just/
 import "/usr/share/ublue-os/justfile"
