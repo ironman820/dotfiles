@@ -22,3 +22,7 @@ bind -n M-l select-pane -R
 
 # Mouse mode
 set -g mouse on
+
+# Clipboard
+set -s set-clipboard external
+bind -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "xsel -i --clipboard"
