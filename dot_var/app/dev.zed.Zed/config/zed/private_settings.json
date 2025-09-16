@@ -15,6 +15,11 @@
           "paths": [
             "/app"
           ]
+        },
+        {
+          "paths": [
+            "/etc/traefik"
+          ]
         }
       ]
     },
@@ -42,6 +47,14 @@
           ]
         }
       ]
+    },
+    {
+      "host": "traefik.home",
+      "projects": []
+    },
+    {
+      "host": "rcm2.home",
+      "projects": []
     }
   ],
   "icon_theme": "Material Icon Theme",
@@ -50,7 +63,12 @@
     "diagnostics": false
   },
   "base_keymap": "VSCode",
+  "disable_ai": true,
   "vim_mode": true,
+  "buffer_font_family": "FiraCode Nerd Font",
+  "buffer_font_features": {
+    "calt": true
+  },
   "ui_font_size": 16,
   "buffer_font_size": 14,
   "theme": {
@@ -79,5 +97,8 @@
       "debuggers": ["Debugpy"],
       "format_on_save": "off"
     }
+  },
+  "terminal": {
+    "font_family": "FiraCode Nerd Font Mono"
   }
 }
