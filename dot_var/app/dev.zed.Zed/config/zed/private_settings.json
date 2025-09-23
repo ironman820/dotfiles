@@ -15,22 +15,12 @@
           "paths": [
             "/app"
           ]
-        },
-        {
-          "paths": [
-            "/etc/traefik"
-          ]
         }
       ]
     },
     {
       "host": "rcm.desk",
       "projects": [
-        {
-          "paths": [
-            "/app"
-          ]
-        },
         {
           "paths": [
             "/var/www/html"
@@ -54,6 +44,10 @@
     },
     {
       "host": "rcm2.home",
+      "projects": []
+    },
+    {
+      "host": "rcm2",
       "projects": []
     }
   ],
